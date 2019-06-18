@@ -23,16 +23,16 @@ window.onload = function(){
   function createNewItem(){
   //NEW ITEM DETAILS
   let newItemName = document.getElementById('item-name').value;
-  let newItemPrice = document.getElementById('item-price').valueAsNumber;
+  let newItemPrice = document.getElementById('item-price').valueAsNumber.toFixed(2);
 
   //ITEM TEMPLATE
   let newItem = document.createElement('div');
 
   newItem.setAttribute('class', 'merch-container');
   newItem.innerHTML = `<span>${newItemName}</span>
-                        <span class="price" value="${newItemPrice}">$${newItemPrice}.00</span>
+                        <span class="price" value="${newItemPrice}">$${newItemPrice}</span>
                         <span >QTY
-                          <input type="number" class="quantity">
+                          <input type="number" class="quantity" value="0">
                         </span>
                         <span class="total-per-unit">$0.00</span>
                         <span>
